@@ -1,11 +1,11 @@
-import { createSlicee } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     status: 'In',
     history:[],
 };
 
-const whereaboutSlice = createSlicee({
+const whereaboutSlice = createSlice({
     name: 'whereabout',
     initialState,
     reducers: {

@@ -2,7 +2,6 @@ import React
 , {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { setWhereabout } from '@/slices/whereaboutSlice';
-import { setWhereabout } from '@/slices/whereaboutSlice';
 import axios from 'axios';
 
 const WhereaboutForm = () => {
@@ -11,7 +10,7 @@ const WhereaboutForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const whereaboutData = {location, time: new Date().toISOStrung() };
+        const whereaboutData = {location, time: new Date().toISOString() };
 
         axios.post('/whereabouts', whereaboutData).then(() => {
             dispatch(setWhereabout(whereaboutData));

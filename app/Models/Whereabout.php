@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Whereabout extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['users', 'location', 'time'];
 }

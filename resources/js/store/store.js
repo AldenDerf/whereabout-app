@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { userReducer } from "./slices/userSlice";
-import whereaboutReducer from './slices/whereaboutSlice';
+import  {configureStore } from "@reduxjs/toolkit";
+import  userReducer  from "../slices/userSlice";
+import whereaboutReducer from '../slices/whereaboutSlice';
 
 export const store = configureStore({
     reducer: {
