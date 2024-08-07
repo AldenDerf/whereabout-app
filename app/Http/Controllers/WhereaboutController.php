@@ -14,7 +14,12 @@ class WhereaboutController extends Controller
             'time' => 'required|date',
         ]);
 
-        Whereabout::create($request->all)();
+        // Add the authenticated user's ID
+        $data = $request->all();
+        $data['user_id'] = auth()->user()->id;
+
+
+        Whereabout::create($data);
         return response()->json(['message' => 'Whereabout logged']);
     }
 

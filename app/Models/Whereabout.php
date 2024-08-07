@@ -9,5 +9,5 @@ class Whereabout extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['users', 'location', 'time'];
+    protected $fillable = ['id' ,'user_id', 'location', 'time'];
 }

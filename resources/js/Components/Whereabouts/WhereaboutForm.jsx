@@ -10,7 +10,7 @@ const WhereaboutForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const whereaboutData = {location, time: new Date().toISOString() };
+        const whereaboutData = {location, time: new Date().toISOString() }
 
         axios.post('/whereabouts', whereaboutData).then(() => {
             dispatch(setWhereabout(whereaboutData));
